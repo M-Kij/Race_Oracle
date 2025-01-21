@@ -147,13 +147,7 @@ with col2:
         if st.button('Wysyłam!'):
             # Pobranie odpowiedzi od AI
             answer=get_data_from_text(text)
-            # st.write(f'Wysyłam do AI {text}')
-    #         answer =  {
-    # "sex": "M",
-    # "age": 32,
-    # "time": 27
-    # }
-                 
+                   
             # Sprawdzenie czy w odpowiedzi są wszystkie 3 dane i reakcja na ich brak
             missing_values = [key for key, value in answer.items() if not value]
             if missing_values:
@@ -254,6 +248,7 @@ with col2:
                     time.sleep(2)
                     st.markdown(f'<p style="color: orange; text-align: center; font-size: 18px">{sentence}</p>', unsafe_allow_html=True)
                     time.sleep(5)
+                    
                     # Reset aplikacji
                     if st.button("RESET"):
                         st.session_state.text = ""
@@ -271,7 +266,7 @@ with col2:
             st.markdown('<p style="color: orange;">Czy chcesz mi wysłać te informacje?</p>', unsafe_allow_html=True)
             
     else:
-        time.sleep(6)
+        time.sleep(5)
         st.markdown('<p style="color: orange;">Czekam i czekam, myślę i myślę...</p>', unsafe_allow_html=True)  
  
 
